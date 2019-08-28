@@ -1,0 +1,9 @@
+from distutils.core import setup
+
+setup(name='minisam',
+      version='0.0.0',
+      packages=['minisam', 'minisam.sophus'],
+      package_dir={'minisam': '${MINISAM_WRAPPER_PATH}',
+                   'minisam.sophus': '${SOPHUS_WRAPPER_PATH}'},
+      package_data={'minisam': ['${MINISAM_WRAPPER_FILE_NAME}', 'libminisam*', 'minisam*'],
+                    'minisam.sophus': ['${SOPHUS_WRAPPER_FILE_NAME}']})

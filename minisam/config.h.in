@@ -1,0 +1,29 @@
+/**
+ * @file  config.h
+ * @brief configurations import from CMake
+ * @author Jing Dong
+ * @date  Sep 21, 2018
+ */
+
+#pragma once
+
+// enable multi-threading
+#cmakedefine MINISAM_WITH_MULTI_THREADS
+
+// number of threads to use if enable multi-threading
+#define MINISAM_WITH_MULTI_THREADS_NUM ${MINISAM_WITH_MULTI_THREADS_NUM}
+
+// enable internal timing
+#cmakedefine MINISAM_WITH_INTERNAL_TIMING
+
+// Whether use Sophus
+#cmakedefine MINISAM_USE_SOPHUS
+
+// Whether use CUDA cuSOLVER
+#cmakedefine MINISAM_USE_CUSOLVER
+
+// Whether use SuiteSparse CHOLMOD solver
+#cmakedefine MINISAM_USE_CHOLMOD
+
+// Whether use SuiteSparse SPQR solver
+#cmakedefine MINISAM_USE_SPQR

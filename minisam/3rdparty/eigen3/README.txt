@@ -1,0 +1,1 @@
+Here is a patched version of Eigen3 AMD ordering, which is licensed by LGPL license. The Eigen3 built-in AMD ordering has segfault bug when calculating ordering of very large system. This patched version is used by miniSAM CPU Cholosky and GPU Cholosky linear solvers.
