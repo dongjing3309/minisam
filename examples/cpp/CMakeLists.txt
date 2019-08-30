@@ -4,7 +4,7 @@
 set(EXCLUDED_EXAMPLES " ")
 
 # sophus
-if(NOT MINISAM_WITH_SOPHUS)
+if(NOT MINISAM_USE_SOPHUS)
   list(APPEND EXCLUDED_EXAMPLES "bundle_adjustment_bal")
   list(APPEND EXCLUDED_EXAMPLES "gps_factor_example")
   list(APPEND EXCLUDED_EXAMPLES "pose_graph_example")
