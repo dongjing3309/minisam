@@ -72,4 +72,4 @@ License
 -----
 
 miniSAM is released under the BSD license, reproduced in the file LICENSE in this directory.
-Note that the linked sparse linear solvers have different licenses, see [this page](file:///home/jing/code/minisam-website/build/install.html#sparse-solvers-license) for details
+Note that the linked sparse linear solvers have different licenses, see [this page](https://minisam.readthedocs.io/install.html#sparse-solvers-license) for details
