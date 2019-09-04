@@ -53,7 +53,7 @@ The miniSAM library is designed to be cross-platform, should be compatible with 
 Questions & Bug Reporting
 -----
 
-Please use Github issue tracker for general questions and reporting bugs.
+Please use Github issue tracker for general questions and reporting bugs, before submitting an issue please have a look of [this page](https://minisam.readthedocs.io/github_issue.html).
 
 Citing
 -----
@@ -64,7 +64,10 @@ If you use miniSAM in an academic context, please cite following publications:
 @article{Dong19ppniv,
   author    = {Jing Dong and Zhaoyang Lv},
   title     = {mini{SAM}: A Flexible Factor Graph Non-linear Least Squares Optimization Framework},
+  journal   = {CoRR},
+  volume    = {abs/1909.00903},
   year      = {2019},
+  url       = {http://arxiv.org/abs/1909.00903}
 }
 ```
 
