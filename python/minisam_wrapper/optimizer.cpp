@@ -70,11 +70,11 @@ void wrap_optimizer(py::module& m) {
             const Variables& init_values, Variables& opt_values, 
             const VariablesToEliminate& var_elimiated) {
           return opt.optimize(graph, init_values, opt_values, var_elimiated);
-        })
+        }, py::call_guard<py::gil_scoped_release>())
     .def("optimize", [](NonlinearOptimizer &opt, const FactorGraph& graph, 
             const Variables& init_values, Variables& opt_values) {
           return opt.optimize(graph, init_values, opt_values);
-        })
+        }, py::call_guard<py::gil_scoped_release>())
 
     .def("iterate", &NonlinearOptimizer::iterate)
     .def("iterations", &NonlinearOptimizer::iterations)
@@ -147,7 +147,7 @@ void wrap_optimizer(py::module& m) {
   py::class_<MarginalCovarianceSolver>(m, "MarginalCovarianceSolver")
     .def(py::init<>())
     .def(py::init<const MarginalCovarianceSolverParams&>())
-    .def("initialize", &MarginalCovarianceSolver::initialize)
+    .def("initialize", &MarginalCovarianceSolver::initialize, py::call_guard<py::gil_scoped_release>())
     .def("marginalCovariance", &MarginalCovarianceSolver::marginalCovariance)
     .def("jointMarginalCovariance", &MarginalCovarianceSolver::jointMarginalCovariance)
     ;
