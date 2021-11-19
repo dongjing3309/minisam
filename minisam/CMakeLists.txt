@@ -83,6 +83,11 @@ else()
 
 endif()
 
+if(MINISAM_USE_SOPHUS)
+  find_package(fmt)
+  target_link_libraries(${PROJECT_NAME} PUBLIC fmt)
+endif()
+
 
 # --------------------------------------
 # 3rd party install
