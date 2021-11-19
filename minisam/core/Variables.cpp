@@ -11,6 +11,7 @@
 
 #include <algorithm>
 #include <sstream>
+// #include <xmemory>
 
 namespace minisam {
 
@@ -22,6 +23,18 @@ Variables::Variables(const Variables& variables)
       it1->second = it1->second->copy();
     }
   }
+}
+
+
+Variables& Variables::operator=(const Variables& variables) {
+  keyvalues_ =variables.keyvalues_;
+  if (keyvalues_.size() > 0) {
+    for (auto it1 = keyvalues_.begin(); it1 != keyvalues_.end(); it1++) {
+      it1->second = it1->second->copy();
+    }
+  }
+
+  return *this;
 }
 
 /* ************************************************************************** */
