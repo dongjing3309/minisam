@@ -55,7 +55,7 @@ if(MINISAM_BUILD_SHARED_LIB)
   set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ${PROJECT_NAME} CLEAN_DIRECT_OUTPUT 1)
 
   # link to dependency
-  target_link_libraries(${PROJECT_NAME} ${MINISAM_ADDITIONAL_LIBRARIES})
+  target_link_libraries(${PROJECT_NAME} PUBLIC ${MINISAM_ADDITIONAL_LIBRARIES})
   
   if(WIN32)
     set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
@@ -81,6 +81,11 @@ else()
   # install lib
   install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME}-export ARCHIVE DESTINATION lib)
 
+endif()
+
+if(MINISAM_USE_SOPHUS)
+  find_package(fmt)
+  target_link_libraries(${PROJECT_NAME} PUBLIC fmt)
 endif()
 
 
