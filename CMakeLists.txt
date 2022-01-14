@@ -100,6 +100,7 @@ if(MINISAM_WITH_SOPHUS)
     set(MINISAM_USE_SOPHUS 1)
     get_target_property(Sophus_INCLUDE_DIR Sophus::Sophus INTERFACE_INCLUDE_DIRECTORIES)
     include_directories(AFTER ${Sophus_INCLUDE_DIR})
+    list(APPEND MINISAM_ADDITIONAL_LIBRARIES fmt)
 
   else()
     message(WARNING "Using Sophus is set, but Sophus is NOT found. Sophus will not be used")
